@@ -1,0 +1,141 @@
+mat-toolbar {
+  position: relative;
+  display: flex;
+  background-color: #1074CC;
+  & mat-icon {
+    color: white;
+    &.icon-history {
+      display: none;
+    }
+  }
+  .icon-menu {
+    display: none;
+  }
+}
+.image {
+  max-width: 300px;
+}
+.inputForm {
+  width: 620px;
+  margin-left: 190px
+}
+.blocks {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-right: 700px;
+    & a {
+      color: white;
+      font-family: Roboto, serif;
+      font-weight: 400;
+      font-size: 14px;
+    }
+}
+
+.header-toolbar {
+  position: relative;
+  background-color: #1074CC;
+}
+mat-toolbar a, mat-toolbar button {
+  color: white;
+}
+.search-dropdown  {
+  position: absolute;
+  left: 10px;
+  z-index: 1000;
+  width: 620px;
+  top: 5px;
+  align-items: center;
+}
+
+.search-icon {
+  cursor: pointer;
+  color: white;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+.blocks {
+  align-items: center;
+  display: flex;
+  margin: 5vh;
+
+}
+.block{
+  font-family: Roboto;
+  font-weight: 400;
+}
+.search {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+  gap: 10px;
+}
+
+.example-container {
+  margin-left: 190px;
+  width: 600px;
+  height: 200px;
+  border: 1px solid #555;
+  background: #eee;
+  top: 0;
+}
+@media (max-width: 768px) {
+  .header-toolbar {
+    .icon-menu {
+      display: block;
+      margin-right: 10px;
+    }
+  }
+    .header-toolbar{
+
+      background-color: #1074CC;
+      width: 100%;
+    }
+  .blocks {
+    display: none;
+  }
+  .example-spacer {
+    display: none;
+  }
+  .search {
+      flex: 1 1 auto;
+    .icon-history {
+      display: block;
+    }
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+
+  }
+  .profile {
+    margin: 0;
+  }
+  .ava {
+    display: none;
+  }
+  .search-dropdown {
+  }
+  .example-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 0;
+    width: 400px;
+      .drawer_1 {
+        display: none;
+      }
+  }
+  .inputForm {
+    width: 400px;
+    margin-left:0;
+  }
+}
+
+

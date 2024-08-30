@@ -1,0 +1,75 @@
+<mat-toolbar color="primary" class="header-toolbar">
+  <mat-icon class="icon-menu">menu</mat-icon>
+  <div class="logo">
+    <img alt="" src="/image%2026.png">
+  </div>
+<nav class="blocks">
+  <span class="spacer"></span>
+  <img class="block" alt="" src="/link.png">
+  <button class="block" mat-button>Ссылки</button>
+  <img  class="block" alt="" src="/contacts.png">
+  <button class="block" mat-button>Контакты</button>
+  <img  class="block" alt="" src="/tag.png">
+  <button class="block" mat-button>Теги</button>
+  <img  class="block" alt="" src="/favorites.png">
+  <button class="block" mat-button>Избранное</button>
+  <img  class="block" alt="" src="/history.png">
+  <button class="block" mat-button>Посещения</button>
+</nav>
+  <!-- Иконка поиска -->
+  <div class="search add">
+  <mat-icon mat-button class="search-icon" (click)="toggleSearchDropdown()">
+    search
+  </mat-icon>
+      <mat-icon class="icon-history">
+        history
+      </mat-icon>
+  <mat-icon  style="color:white;" >
+    add_circle</mat-icon>
+
+  </div>
+  <span class="example-spacer"></span>
+
+  <div class="profile">
+    <img style="cursor: pointer"  alt="" src="/Notifications.png">
+    <img class="ava" style="cursor: pointer" alt="" src="/AVA.png">
+    <div class="profile-img-placeholder"></div>
+  </div>
+</mat-toolbar>
+
+<div *ngIf="isSearchDropdownVisible" class="search-dropdown">
+
+  <mat-form-field class="inputForm" >
+    <input matInput placeholder="Поисковой запрос" />
+  </mat-form-field>
+
+  <mat-drawer-container  class="example-container">
+
+      <mat-drawer class="drawer_1" mode="side" opened>
+        <ul style="list-style-type: none">
+          <li>История</li>
+          <li>Закрепить теги</li>
+          <li>Кнопка</li>
+          <li>Приложение</li>
+          <li>Форма</li>
+          <li>Текстовое поле</li>
+        </ul>
+      </mat-drawer>
+    <mat-drawer-content>
+        <mat-form-field appearance="outline">
+          <mat-label>Автор</mat-label>
+          <input matInput placeholder="Имя или должность" />
+        </mat-form-field>
+        <mat-checkbox>Я участник</mat-checkbox>
+        <mat-checkbox>Строгий поиск</mat-checkbox>
+        <mat-checkbox>В заголовках</mat-checkbox>
+        <div class="checkbox-group">
+          <span>Только</span>
+          <mat-checkbox>Теги</mat-checkbox>
+          <mat-checkbox>Просьбы</mat-checkbox>
+          <mat-checkbox>Контакты</mat-checkbox>
+        </div>
+    </mat-drawer-content>
+    </mat-drawer-container>
+</div>
+
